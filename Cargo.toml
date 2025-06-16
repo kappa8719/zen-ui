@@ -1,0 +1,10 @@
+[package]
+name = "zen-ui"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+js-sys = "0.3.77"
+sycamore = "0.9.1"
+sycamore-router = "0.9.1"
+web-sys = { version = "0.3.77", features = ["Document", "ViewTransition"] }

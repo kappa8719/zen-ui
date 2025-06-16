@@ -1,0 +1,13 @@
+@utility btn {
+    @apply transition-all;
+
+    &:active:not(.btn-active) {
+        scale: 0.95;
+    }
+
+    &:focus-visible {
+        @apply ring-2 ring-offset-2;
+        outline: 2px transparent;
+        isolation: isolate;
+    }
+}

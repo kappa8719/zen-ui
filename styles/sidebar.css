@@ -1,0 +1,9 @@
+.sidebar {
+    view-transition-name: sidebar;
+}
+
+::view-transition-group(sidebar),
+::view-transition-old(sidebar),
+::view-transition-new(sidebar) {
+    animation-duration: 0s !important;
+}

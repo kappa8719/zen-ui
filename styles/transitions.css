@@ -1,0 +1,53 @@
+.view-transition-fixed {
+    position: fixed;
+    view-transition-name: view-transition-fixed;
+}
+
+::view-transition-group(view-transition-fixed) {
+    position: fixed;
+    z-index: 2000;
+}
+
+.view-transition-disabled {
+    view-transition-name: view-transition-disabled;
+}
+
+::view-transition-group(view-transition-disabled),
+::view-transition-old(view-transition-disabled),
+::view-transition-new(view-transition-disabled) {
+    animation-duration: 0s !important;
+}
+
+::view-transition-old {
+    pointer-events: none;
+    animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-out 0.5s;
+}
+
+::view-transition-new {
+    animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-in 0.5s;
+}
+
+@keyframes navigate-in {
+    from {
+        opacity: 0;
+        transform: translate(15%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        z-index: 1001;
+    }
+}
+
+@keyframes navigate-out {
+    from {
+        opacity: 1;
+        transform: translate(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-5%);
+        z-index: 1000;
+    }
+}
