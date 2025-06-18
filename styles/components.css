@@ -11,3 +11,27 @@
         isolation: isolate;
     }
 }
+
+@utility modal {
+    @apply opacity-0;
+    background-color: oklch(0% 0 0/ 0.4);
+    transition:
+            translate 0.3s ease-out,
+            visibility 0.3s allow-discrete,
+            background-color 0.3s ease-out,
+            opacity 0.3s ease-out;
+}
+
+@utility modal-backdrop {
+    button {
+        cursor: default;
+    }
+}
+
+@utility modal-box {
+    transition:
+            translate 0.3s ease-out,
+            scale 0.3s ease-out,
+            opacity 0.2s ease-out 0.05s,
+            box-shadow 0.3s ease-out;
+}
