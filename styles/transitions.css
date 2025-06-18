@@ -4,7 +4,6 @@
 }
 
 ::view-transition-group(view-transition-fixed) {
-    position: fixed;
     z-index: 2000;
 }
 
@@ -18,12 +17,16 @@
     animation-duration: 0s !important;
 }
 
-::view-transition-old {
+.view-transition-navigate {
+    view-transition-name: navigate;
+}
+
+::view-transition-old(navigate) {
     pointer-events: none;
     animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-out 0.5s;
 }
 
-::view-transition-new {
+::view-transition-new(navigate) {
     animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-in 0.5s;
 }
 
