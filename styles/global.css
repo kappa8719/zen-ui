@@ -4,7 +4,9 @@
 @import "./lucide.css";
 @import "./sidebar.css";
 
-@plugin "../node/node_modules/daisyui";
+@plugin "../node/node_modules/daisyui" {
+    exclude: rootscrollgutter;
+}
 @plugin "../node/node_modules/@tailwindcss/typography";
 
 @plugin "../node/node_modules/daisyui/theme" {
