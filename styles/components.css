@@ -1,5 +1,6 @@
 @utility btn {
     @apply transition-all;
+    --btn-shadow: "";
 
     &:active:not(.btn-active) {
         scale: 0.95;
@@ -13,13 +14,7 @@
 }
 
 @utility modal {
-    @apply opacity-0;
-    background-color: oklch(0% 0 0/ 0.4);
-    transition:
-            translate 0.3s ease-out,
-            visibility 0.3s allow-discrete,
-            background-color 0.3s ease-out,
-            opacity 0.3s ease-out;
+    @apply h-screen;
 }
 
 @utility modal-backdrop {
@@ -28,10 +23,14 @@
     }
 }
 
-@utility modal-box {
-    transition:
-            translate 0.3s ease-out,
-            scale 0.3s ease-out,
-            opacity 0.2s ease-out 0.05s,
-            box-shadow 0.3s ease-out;
+@utility input {
+    @apply transition-all ring-0 ring-offset-0;
+    outline: none;
+
+    &:focus,
+    &:focus-within {
+        border-color: transparent;
+        outline: 0;
+        @apply ring-2 ring-offset-2 bg-primary/20;
+    }
 }
