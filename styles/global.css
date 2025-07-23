@@ -11,7 +11,7 @@
 
 @plugin "../node/node_modules/daisyui/theme" {
     name: "pastel";
-    default: false;
+    default: true;
     prefersdark: true;
     color-scheme: "light";
     --color-base-100: oklch(100% 0 0);
