@@ -1,9 +1,16 @@
-.sidebar {
-    view-transition-name: sidebar;
+.sidebar[data-transition="false"] {
+    /*view-transition-group: root;*/
+    view-transition-name: view-transition-disabled;
 }
 
-::view-transition-group(sidebar),
-::view-transition-old(sidebar),
-::view-transition-new(sidebar) {
-    animation-duration: 0s !important;
-}
+/*.sidebar[data-transition="true"] {*/
+/*    view-transition-name: auto;*/
+/*}*/
+
+/*::view-transition-old(sidebar) {*/
+/*    animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-out 0.5s;*/
+/*}*/
+
+/*::view-transition-new(sidebar) {*/
+/*    animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-in 0.5s;*/
+/*}*/

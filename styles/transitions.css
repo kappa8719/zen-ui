@@ -4,7 +4,7 @@
 }
 
 ::view-transition-group(view-transition-fixed) {
-    z-index: 2000;
+    z-index: 300;
 }
 
 .view-transition-disabled {
@@ -17,40 +17,42 @@
     animation-duration: 0s !important;
 }
 
-.view-transition-navigate {
-    view-transition-name: navigate;
-}
+/*.view-transition-navigate {*/
+/*    view-transition-name: navigate;*/
+/*}*/
 
-::view-transition-old(navigate) {
+/*::view-transitions-old(root),*/
+/*::view-transition-new(root) {*/
+/*    animation: none;*/
+/*}*/
+
+::view-transition-old(root) {
     pointer-events: none;
     animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-out 0.5s;
 }
 
-::view-transition-new(navigate) {
+::view-transition-new(root) {
     animation: cubic-bezier(0.4, 0.0, 0.2, 1.0) navigate-in 0.5s;
 }
 
 @keyframes navigate-in {
     from {
         opacity: 0;
-        transform: translate(15%);
+        scale: 0.9;
     }
     to {
         opacity: 1;
-        transform: translate(0%);
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        z-index: 1001;
+        scale: 1.0;
     }
 }
 
 @keyframes navigate-out {
     from {
         opacity: 1;
-        transform: translate(0%);
+        scale: 1.0;
     }
     to {
         opacity: 0;
-        transform: translate(-5%);
-        z-index: 1000;
+        scale: 1.1;
     }
 }

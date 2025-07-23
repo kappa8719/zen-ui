@@ -1,4 +1,7 @@
+# Targets
 /target
+/macros/target
 /dist
+
 /node/node_modules
 /.idea
